@@ -64,6 +64,7 @@ public abstract class Employee implements Display {
         System.out.println("First Name : "+ getFirstname());
         System.out.println("Last Name : "+ getLastname());
         System.out.println("D.O.B : " + getDOB());
+
     }
 
     public abstract void calculatePay();

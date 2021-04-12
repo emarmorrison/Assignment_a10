@@ -68,15 +68,20 @@ public class SalesPerson extends Employee{
             setRate(0.16);
     }
 
-    public void calculatePayAdvance()    {
+    public void calculatePayAdvance(){
 
         if(getAdvance()>1500)
             System.out.println("You exceed the maximum request");
         else
-            setPay(getCommission() - getAdvance());
+           calculatePay();
 
         if(getPay() < 0)
             System.out.println("You owe Hal: " + getPay());
+    }
+
+    @Override
+    public void calculatePay(){
+        setPay(getCommission() - getAdvance());
     }
 
     @Override
@@ -92,9 +97,5 @@ public class SalesPerson extends Employee{
             JOptionPane.showMessageDialog(null, "Your Pay Is: " + getPay());
     }
 
-    @Override
-    public void calculatePay() {
-
-    }
 
 }

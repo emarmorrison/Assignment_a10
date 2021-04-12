@@ -13,6 +13,10 @@ public class SalariedEmployee extends Employee {
         this.weeklySalary = weeklySalary;
     }
 
+    public SalariedEmployee() {
+
+    }
+
     public double getBonus() {
         return bonus;
     }
@@ -31,9 +35,10 @@ public class SalariedEmployee extends Employee {
 
     @Override
     public  void display(){
-        System.out.println("++++++++++ Salaried Employee +++++++++++");
+        System.out.println("++++++++++ Salaried Employee +++++++++++\n\n");
         super.display();
         System.out.println("Weekly Salary : "+ getWeeklySalary());
+        System.out.println("Net Salary : "+ getPay());
 
     }
 
